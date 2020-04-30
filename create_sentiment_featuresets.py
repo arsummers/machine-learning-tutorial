@@ -8,3 +8,19 @@ from nltk.stem import WordNetLemmatizer
 
 lemmatizer = WordNetLemmatizer()
 hm_lines = 100000
+
+def create_lexicon(pos, neg):
+
+    lexicon = []
+    with open(pos, 'r') as f:
+        contents = f.readlines()
+        for l in contents[:hm_lines]:
+            all_words = word_tokenize(l)
+            lexicon += list(all_words)
+
+    with open(neg, 'r') as f:
+        contents = f.readlines()
+        for l in contents[:hm_lines]:
+            all_words = word_tokenize(l)
+            lexicon += list(all_words)
+

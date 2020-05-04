@@ -7,6 +7,12 @@ verify_ssl = true
 
 [packages]
 nltk = "*"
+numpy = "*"
+scipy = "*"
+scikit-learn = "*"
+matplotlib = "*"
+pandas = "*"
+quandl = "*"
 
 [requires]
 python_version = "3.7"
